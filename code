@@ -14,9 +14,9 @@ rule find_whisper
 	in_the_wild = "True"
   
   strings:
-    $a1 = {83 ec 1c 8b 44 24}             // HEX from offset @ 0x0400
+    	$a1 = {83 ec 1c 8b 44 24}             // HEX from offset @ 0x0400
         
   condition:
-    $a1
-    or hash.md5(0, filesize) == "5d5c99a08a7d927346ca2dafa7973fc1"    
+    	$a1
+    	or hash.md5(0, filesize) == "5d5c99a08a7d927346ca2dafa7973fc1"    
 } 
